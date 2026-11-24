@@ -8,25 +8,25 @@
 script = ExtResource("1_j2eoc")
 
 [node name="0" type="Sprite2D" parent="."]
-position = Vector2(311.5, 51.5)
+position = Vector2(315, 62)
 scale = Vector2(0.112857, 0.112857)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
 [node name="1" type="Sprite2D" parent="."]
-position = Vector2(413, 50)
+position = Vector2(427, 63)
 scale = Vector2(0.112857, 0.112857)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
 [node name="2" type="Sprite2D" parent="."]
-position = Vector2(512, 49)
+position = Vector2(517, -54.5)
 scale = Vector2(0.112857, 0.112857)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
 [node name="3" type="Sprite2D" parent="."]
-position = Vector2(610, 47)
+position = Vector2(615, -56.5)
 scale = Vector2(0.112857, 0.112857)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
