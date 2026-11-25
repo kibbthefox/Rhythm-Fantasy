@@ -8,7 +8,7 @@ var clonebool:bool = false
 func _ready() -> void:
 	position.y = -86.0
 
-
+# Clones every beat when active
 func _physics_process(_delta: float) -> void:
 	if going == true:
 		time +=  1
@@ -18,23 +18,13 @@ func _physics_process(_delta: float) -> void:
 	if clonebool == true:
 		position.y += 5
 
-
+# Deletes Clones
 func _process(_delta: float) -> void:
 	if position.y >= 727.0:
-		pass
+		self.queue_free()
 
-
-func start():
-	going = true
-	print("started")
-	
-func end():
-	going = false
-
-
+# Clones
 func clone():
-	print("clonestart")
 	var copy = self.duplicate()
 	copy.clonebool = true
 	get_parent().add_child(copy)
-	print("cloned")

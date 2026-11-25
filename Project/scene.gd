@@ -7,8 +7,9 @@ var beat:int = 1
 var select:int = 0
 var song:Array = G.song1
 var bp = song[0]
+var playing:bool = true
 
-
+# Sets note count for next measure + debug menu (DELETE)
 func _process(_delta: float) -> void:
 	bp = song[select]
 	if bp != 3:
@@ -23,21 +24,22 @@ beat: "+str(beat)+"
 time: "+str(time)+"
 time2: "+str(time2) 
 
-
+# Counts measures/beats
 func _physics_process(_delta: float) -> void:
-	time +=  1
-	time2 += 1
-	if time > (240/bp) and bp !=3:
-		go(song[select+beat])
-		beat += 1
-		time = 1
-	if time2 > 240 and bp !=3:
-		measure += 1
-		beat = 1
-		select += bp + 1
-		time2 = 1
+	if playing == true:
+		time +=  1
+		time2 += 1
+		if time > (240/bp) and bp !=3:
+			go(song[select+beat])
+			beat += 1
+			time = 1
+		if time2 > 240 and bp !=3:
+			measure += 1
+			beat = 1
+			select += bp + 1
+			time2 = 1
 
-
+# Tells notes to go
 func go(notes:Array):
 	if notes.has(1):
 		for i in range(0,4):
