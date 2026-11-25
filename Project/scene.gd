@@ -7,16 +7,12 @@ var beat:int = 1
 var select:int = 0
 var song:Array = G.song1
 var bp = song[0]
-var which1
-var which2
-var which3
-var start:bool = false
 
 
 func _process(_delta: float) -> void:
-	if bp != 0:
-		bp = song[select]
-	$debug.text="debug
+	bp = song[select]
+	if bp != 3:
+		$debug.text="debug
 notes: "+str(song[select+beat])+"
 bp: "+str(bp)+"
 select: "+str(select)+"
@@ -31,30 +27,27 @@ time2: "+str(time2)
 func _physics_process(_delta: float) -> void:
 	time +=  1
 	time2 += 1
-	if time > (240/bp):
+	if time > (240/bp) and bp !=3:
 		go(song[select+beat])
 		beat += 1
 		time = 1
-	if time2 > 240:
+	if time2 > 240 and bp !=3:
 		measure += 1
 		beat = 1
 		select += bp + 1
 		time2 = 1
-	#if start = true:
-
-
-#func _ready() -> void:
-#	if self.name == "0":
-#		go([1,0,0,0])
 
 
 func go(notes:Array):
 	if notes.has(1):
 		for i in range(0,4):
 			if notes[i] == 1:
-				get_tree().root.get_node("Scene").get_node(str(i)).start()
-	#if notes.has(2):
-		#which2 = notes.find(2)
-	#if notes.has(3):
-		#which3 = notes.find(3)
-	start = true
+				get_tree().root.get_node("Scene").get_node("notes").get_node(str(i)).note(1)
+	if notes.has(2):
+		for i in range(0,4):
+			if notes[i] == 1:
+				get_tree().root.get_node("Scene").get_node("notes").get_node(str(i)).note(2)
+	if notes.has(3):
+		for i in range(0,4):
+			if notes[i] == 1:
+				get_tree().root.get_node("Scene").get_node("notes").get_node(str(i)).note(3)

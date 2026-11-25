@@ -1,31 +1,90 @@
-[gd_scene load_steps=4 format=3 uid="uid://7meloxhw6y8d"]
+[gd_scene load_steps=5 format=3 uid="uid://7meloxhw6y8d"]
 
 [ext_resource type="Texture2D" uid="uid://d0ocy815quvl5" path="res://assets/IMG_3691.JPG" id="1_4cvuw"]
 [ext_resource type="Script" uid="uid://dsk5wi2bepq2s" path="res://scene.gd" id="1_j2eoc"]
 [ext_resource type="Script" uid="uid://67uknsciq8u0" path="res://notes.gd" id="2_j2eoc"]
+[ext_resource type="Script" uid="uid://da2lav322ovk0" path="res://held.gd" id="3_7mckg"]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_j2eoc")
 
-[node name="0" type="Sprite2D" parent="."]
+[node name="held" type="Node2D" parent="."]
+
+[node name="0" type="Sprite2D" parent="held"]
+position = Vector2(337, 727)
+scale = Vector2(0.06, 0.15)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("3_7mckg")
+
+[node name="notes" type="Node2D" parent="."]
+
+[node name="0" type="Sprite2D" parent="notes"]
 position = Vector2(300, -39)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
-[node name="1" type="Sprite2D" parent="."]
+[node name="1" type="Sprite2D" parent="notes"]
 position = Vector2(430, -39)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
-[node name="2" type="Sprite2D" parent="."]
+[node name="2" type="Sprite2D" parent="notes"]
 position = Vector2(560, -39)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
-[node name="3" type="Sprite2D" parent="."]
+[node name="3" type="Sprite2D" parent="notes"]
+position = Vector2(690, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="4" type="Sprite2D" parent="notes"]
+position = Vector2(300, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="5" type="Sprite2D" parent="notes"]
+position = Vector2(430, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="6" type="Sprite2D" parent="notes"]
+position = Vector2(560, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="7" type="Sprite2D" parent="notes"]
+position = Vector2(690, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="8" type="Sprite2D" parent="notes"]
+position = Vector2(300, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="9" type="Sprite2D" parent="notes"]
+position = Vector2(430, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="10" type="Sprite2D" parent="notes"]
+position = Vector2(560, -39)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("2_j2eoc")
+
+[node name="11" type="Sprite2D" parent="notes"]
 position = Vector2(690, -39)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
