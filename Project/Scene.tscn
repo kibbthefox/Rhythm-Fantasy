@@ -8,30 +8,40 @@
 script = ExtResource("1_j2eoc")
 
 [node name="0" type="Sprite2D" parent="."]
-position = Vector2(315, 62)
-scale = Vector2(0.112857, 0.112857)
+position = Vector2(300, -39)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
 [node name="1" type="Sprite2D" parent="."]
-position = Vector2(427, 63)
-scale = Vector2(0.112857, 0.112857)
+position = Vector2(430, -39)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
 [node name="2" type="Sprite2D" parent="."]
-position = Vector2(517, -54.5)
-scale = Vector2(0.112857, 0.112857)
+position = Vector2(560, -39)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
 [node name="3" type="Sprite2D" parent="."]
-position = Vector2(615, -56.5)
-scale = Vector2(0.112857, 0.112857)
+position = Vector2(690, -39)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("2_j2eoc")
 
-[node name="Img3691" type="Sprite2D" parent="."]
-position = Vector2(51, 32)
-scale = Vector2(0.121429, 0.0771429)
-texture = ExtResource("1_4cvuw")
+[node name="debug" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = 84.0
+offset_right = 205.0
+offset_bottom = 333.0
+text = "debug
+bp
+select
+
+measure
+beat
+
+time
+time2"

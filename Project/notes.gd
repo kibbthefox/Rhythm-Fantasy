@@ -1,17 +1,27 @@
 extends Sprite2D
 
-#var start:bool = false
-#
-#
-#func _ready() -> void:
-	#if self.name == "0":
-		#go([1,0,0,0])
-#
-#
-#func go(notes):
-	#start = true
-#
-#
-#func _physics_process(delta: float) -> void:
-	#if start = true:
-		#
+var going = false
+
+
+func _ready() -> void:
+	position.y = -39.0
+
+
+func start():
+	going = true
+
+
+func _physics_process(_delta: float) -> void:
+	if going == true:
+		position.y += 5
+
+
+func _process(_delta: float) -> void:
+	if position.y >= 686.0:
+		going = false
+		miss()
+		position.y = -39.0
+
+
+func miss():
+	pass
