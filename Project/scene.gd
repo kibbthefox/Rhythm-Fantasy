@@ -45,9 +45,9 @@ func go(notes:Array):
 				get_tree().root.get_node("Scene").get_node("notes").get_node(str(i)).note(1)
 	if notes.has(2):
 		for i in range(0,4):
-			if notes[i] == 1:
+			if notes[i] == 2:
 				get_tree().root.get_node("Scene").get_node("notes").get_node(str(i)).note(2)
 	if notes.has(3):
 		for i in range(0,4):
-			if notes[i] == 1:
+			if notes[i] == 3:
 				get_tree().root.get_node("Scene").get_node("notes").get_node(str(i)).note(3)

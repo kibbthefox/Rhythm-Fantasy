@@ -36,6 +36,5 @@ func clone():
 	print("clonestart")
 	var copy = self.duplicate()
 	copy.clonebool = true
-	copy.position = position
 	get_parent().add_child(copy)
 	print("cloned")

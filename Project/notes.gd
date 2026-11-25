@@ -16,6 +16,8 @@ func note(incometype):
 		type = incometype
 		if type == 2:
 			get_tree().root.get_node("Scene").get_node("held").get_node(str(self.name)).start()
+		if type == 3:
+			get_tree().root.get_node("Scene").get_node("held").get_node(str(int(int(self.name) - 4*floor(float(self.name) / 4.0)))).end()
 		going = true
 
 
@@ -26,8 +28,6 @@ func _physics_process(_delta: float) -> void:
 
 func _process(_delta: float) -> void:
 	if position.y >= 686.0:
-		if type == 3:
-			get_tree().root.get_node("Scene").get_node("held").get_node(str(self.name)).end()
 		going = false
 		miss()
 		position.y = -39.0
