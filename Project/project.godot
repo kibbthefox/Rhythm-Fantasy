@@ -20,6 +20,8 @@ G="*res://g.gd"
 
 [display]
 
+window/size/viewport_width=2304
+window/size/viewport_height=1296
 window/stretch/mode="viewport"
 
 [editor_plugins]
@@ -28,7 +30,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [physics]
 
-common/physics_ticks_per_second=120
+common/physics_ticks_per_second=144
 
 [rendering]
 

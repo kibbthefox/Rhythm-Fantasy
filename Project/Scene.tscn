@@ -1,124 +1,141 @@
-[gd_scene load_steps=5 format=3 uid="uid://7meloxhw6y8d"]
+[gd_scene load_steps=9 format=3 uid="uid://7meloxhw6y8d"]
 
 [ext_resource type="Texture2D" uid="uid://d0ocy815quvl5" path="res://assets/IMG_3691.JPG" id="1_4cvuw"]
 [ext_resource type="Script" uid="uid://dsk5wi2bepq2s" path="res://scene.gd" id="1_j2eoc"]
+[ext_resource type="Texture2D" uid="uid://bql34mpjr238d" path="res://assets/white.png" id="2_eort7"]
 [ext_resource type="Script" uid="uid://67uknsciq8u0" path="res://notes.gd" id="2_j2eoc"]
 [ext_resource type="Script" uid="uid://da2lav322ovk0" path="res://held.gd" id="3_7mckg"]
+[ext_resource type="Texture2D" uid="uid://kksd0ke4vv2s" path="res://assets/Circle.png" id="5_tysh6"]
+[ext_resource type="FontFile" uid="uid://blx6yco87sn67" path="res://assets/Fonts/songs.ttf" id="6_dob7g"]
+[ext_resource type="Texture2D" uid="uid://c2hnyaw2ajaiv" path="res://assets/Open.png" id="8_q6i3i"]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_j2eoc")
 
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(1152, 648)
+scale = Vector2(1152, 648)
+texture = ExtResource("2_eort7")
+
 [node name="held" type="Node2D" parent="."]
 
 [node name="0" type="Sprite2D" parent="held"]
-position = Vector2(383, -90)
-scale = Vector2(0.06, 0.15)
+position = Vector2(768, -152)
+scale = Vector2(0.12, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
 
 [node name="1" type="Sprite2D" parent="held"]
-position = Vector2(513, -90)
-scale = Vector2(0.06, 0.15)
+position = Vector2(1028, -152)
+scale = Vector2(0.12, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
 
 [node name="2" type="Sprite2D" parent="held"]
-position = Vector2(643, -89.5)
-scale = Vector2(0.06, 0.15)
+position = Vector2(1280, -152)
+scale = Vector2(0.12, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
 
 [node name="3" type="Sprite2D" parent="held"]
-position = Vector2(773, -89.5)
-scale = Vector2(0.06, 0.15)
+position = Vector2(1536, -152)
+scale = Vector2(0.12, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
 
 [node name="notes" type="Node2D" parent="."]
 
 [node name="0" type="Sprite2D" parent="notes"]
-position = Vector2(383, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(768, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="1" type="Sprite2D" parent="notes"]
-position = Vector2(513, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1024, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="2" type="Sprite2D" parent="notes"]
-position = Vector2(643, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1280, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="3" type="Sprite2D" parent="notes"]
-position = Vector2(773, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1536, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="4" type="Sprite2D" parent="notes"]
-position = Vector2(383, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(768, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="5" type="Sprite2D" parent="notes"]
-position = Vector2(513, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1024, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="6" type="Sprite2D" parent="notes"]
-position = Vector2(643, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1280, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="7" type="Sprite2D" parent="notes"]
-position = Vector2(773, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1536, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="8" type="Sprite2D" parent="notes"]
-position = Vector2(383, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(768, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="9" type="Sprite2D" parent="notes"]
-position = Vector2(513, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1024, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="10" type="Sprite2D" parent="notes"]
-position = Vector2(643, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1280, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="11" type="Sprite2D" parent="notes"]
-position = Vector2(773, -39)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_4cvuw")
+position = Vector2(1536, -111)
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="debug" type="RichTextLabel" parent="."]
 offset_left = 16.0
 offset_top = 84.0
-offset_right = 205.0
-offset_bottom = 333.0
+offset_right = 573.0
+offset_bottom = 783.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_dob7g")
+theme_override_font_sizes/normal_font_size = 48
 text = "debug
+
 bp
 select
 
 measure
 beat
 
-time
-time2"
+beattime
+measuretime"
+
+[node name="0" type="Sprite2D" parent="."]
+position = Vector2(768, 1145)
+texture = ExtResource("8_q6i3i")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(1024, 1145)
+texture = ExtResource("8_q6i3i")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(1280, 1145)
+texture = ExtResource("8_q6i3i")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(1536, 1145)
+texture = ExtResource("8_q6i3i")
