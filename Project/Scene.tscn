@@ -43,7 +43,6 @@ beattime
 measuretime"
 
 [node name="points" type="RichTextLabel" parent="."]
-visible = false
 offset_left = 21.0
 offset_top = 26.0
 offset_right = 578.0
@@ -55,7 +54,6 @@ text = "Points
 ###"
 
 [node name="combo" type="RichTextLabel" parent="."]
-visible = false
 offset_left = 19.0
 offset_top = 142.0
 offset_right = 576.0
@@ -65,6 +63,90 @@ theme_override_fonts/normal_font = ExtResource("6_dob7g")
 theme_override_font_sizes/normal_font_size = 48
 text = "Combo
 ###"
+
+[node name="lyrics" type="RichTextLabel" parent="."]
+offset_left = 26.0
+offset_top = 268.0
+offset_right = 688.0
+offset_bottom = 3055.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("12_g2wh3")
+theme_override_font_sizes/normal_font_size = 27
+text = "that's not what I meant to say at all 
+I mean
+I'm sick of meaning, I just want to hold you 
+
+but that's not what I wanted to say at all 
+I mean
+I'm sick of meaning, I just want to hold you 
+
+(is it the chorus yet?
+No. it's just a building of the verse 
+so when the chorus does come 
+it'll be more rewarding.)
+
+I would speak to you in song 
+but you can't sing 
+as far as I'm aware
+though everyone can sing 
+as you are well aware
+
+I keep so quiet it's hard to tell I'm alive
+Everybody is swinging their hips
+Everybody is giving the waitress tips 
+Everybody's dancing all of the dances
+Everybody's dancing every dance right now!
+
+those are you got some nice shoulders
+I'd like to put my hands around them 
+I'd like to put my hands around them
+
+I have enough trouble 
+controlling my own limbs 
+stealing alcohol from 
+our parents/grandparents 
+there's no devil on one 
+shoulder/angel on the other 
+they're just two normal people
+
+(these are the people that I get drunk with 
+these are the people that I fell in love with)
+
+But if you keep drawing my eyes on your 
+hand and talking to the other let's pull out 
+the nail with the back of the hammer bc this
+one has grown old and bitter -
+
+well so what?
+We're young
+We're thin (most of us)
+We're alive (most of us)
+
+Don't you realize our bodies 
+could fall apart at any second?
+I am terrified your body 
+could fall apart at any second
+
+those are you got some nice shoulders 
+I'd like to put my hands around them 
+I'd like to put my hands around them
+
+we can get real horny 
+and keep messing around 
+we can keep real quiet 
+won't be making no sound
+I'll try my best not to touch your face 
+next time can we please meet at my place?
+
+and I know that I don't talk a lot 
+but I know that you don't care a lot 
+as long as we move our bodies around a lot 
+we'll forget that we forgot how to talk
+
+When we dance"
+scroll_active = false
+autowrap_mode = 0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_rjlwc")
@@ -320,171 +402,3 @@ shortcut_keys_enabled = false
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("13_g2wh3")
-
-[node name="lyrics 2" type="RichTextLabel" parent="."]
-offset_left = 1616.0
-offset_top = -1254.0
-offset_right = 2278.0
-offset_bottom = 1533.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 15
-theme_override_fonts/normal_font = ExtResource("12_g2wh3")
-theme_override_font_sizes/normal_font_size = 27
-text = "that's not what I meant to say at all 
-I mean
-I'm sick of meaning, I just want to hold you 
-
-but that's not what I wanted to say at all 
-I mean
-I'm sick of meaning, I just want to hold you 
-
-(is it the chorus yet?
-No. it's just a building of the verse 
-so when the chorus does come 
-it'll be more rewarding.)
-
-I would speak to you in song 
-but you can't sing 
-as far as I'm aware
-though everyone can sing 
-as you are well aware
-
-I keep so quiet it's hard to tell I'm alive
-Everybody is swinging their hips
-Everybody is giving the waitress tips 
-Everybody's dancing all of the dances
-Everybody's dancing every dance right now!
-
-those are you got some nice shoulders
-I'd like to put my hands around them 
-I'd like to put my hands around them
-
-I have enough trouble 
-controlling my own limbs 
-stealing alcohol from 
-our parents/grandparents 
-there's no devil on one 
-shoulder/angel on the other 
-they're just two normal people
-
-(these are the people that I get drunk with 
-these are the people that I fell in love with)
-
-But if you keep drawing my eyes on your 
-hand and talking to the other let's pull out 
-the nail with the back of the hammer bc this
-one has grown old and bitter -
-
-well so what?
-We're young
-We're thin (most of us)
-We're alive (most of us)
-
-Don't you realize our bodies 
-could fall apart at any second?
-I am terrified your body 
-could fall apart at any second
-
-those are you got some nice shoulders 
-I'd like to put my hands around them 
-I'd like to put my hands around them
-
-we can get real horny 
-and keep messing around 
-we can keep real quiet 
-won't be making no sound
-I'll try my best not to touch your face 
-next time can we please meet at my place?
-
-and I know that I don't talk a lot 
-but I know that you don't care a lot 
-as long as we move our bodies around a lot 
-we'll forget that we forgot how to talk
-
-When we dance"
-scroll_active = false
-autowrap_mode = 0
-
-[node name="lyrics 1" type="RichTextLabel" parent="."]
-offset_left = 42.0
-offset_top = 23.0
-offset_right = 704.0
-offset_bottom = 2810.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 15
-theme_override_fonts/normal_font = ExtResource("12_g2wh3")
-theme_override_font_sizes/normal_font_size = 27
-text = "that's not what I meant to say at all 
-I mean
-I'm sick of meaning, I just want to hold you 
-
-but that's not what I wanted to say at all 
-I mean
-I'm sick of meaning, I just want to hold you 
-
-(is it the chorus yet?
-No. it's just a building of the verse 
-so when the chorus does come 
-it'll be more rewarding.)
-
-I would speak to you in song 
-but you can't sing 
-as far as I'm aware
-though everyone can sing 
-as you are well aware
-
-I keep so quiet it's hard to tell I'm alive
-Everybody is swinging their hips
-Everybody is giving the waitress tips 
-Everybody's dancing all of the dances
-Everybody's dancing every dance right now!
-
-those are you got some nice shoulders
-I'd like to put my hands around them 
-I'd like to put my hands around them
-
-I have enough trouble 
-controlling my own limbs 
-stealing alcohol from 
-our parents/grandparents 
-there's no devil on one 
-shoulder/angel on the other 
-they're just two normal people
-
-(these are the people that I get drunk with 
-these are the people that I fell in love with)
-
-But if you keep drawing my eyes on your 
-hand and talking to the other let's pull out 
-the nail with the back of the hammer bc this
-one has grown old and bitter -
-
-well so what?
-We're young
-We're thin (most of us)
-We're alive (most of us)
-
-Don't you realize our bodies 
-could fall apart at any second?
-I am terrified your body 
-could fall apart at any second
-
-those are you got some nice shoulders 
-I'd like to put my hands around them 
-I'd like to put my hands around them
-
-we can get real horny 
-and keep messing around 
-we can keep real quiet 
-won't be making no sound
-I'll try my best not to touch your face 
-next time can we please meet at my place?
-
-and I know that I don't talk a lot 
-but I know that you don't care a lot 
-as long as we move our bodies around a lot 
-we'll forget that we forgot how to talk
-
-When we dance"
-scroll_active = false
-autowrap_mode = 0
