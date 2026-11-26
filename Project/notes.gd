@@ -3,10 +3,6 @@ extends Sprite2D
 var going:bool = false
 var type:int = 1
 
-
-func _ready() -> void:
-	position.y = -78.0
-
 # Selects which note sprite to send down
 func note(incometype):
 	if position.y > -60.0:
@@ -29,4 +25,9 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta: float) -> void:
 	if position.y >= 1372.0:
 		going = false
-		position.y = -78.0
+		position.y = -639.0
+
+# Resets note once it is hit
+func hit():
+	going = false
+	position.y = -639.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7meloxhw6y8d"]
+[gd_scene load_steps=14 format=3 uid="uid://7meloxhw6y8d"]
 
 [ext_resource type="Texture2D" uid="uid://d0ocy815quvl5" path="res://assets/IMG_3691.JPG" id="1_4cvuw"]
 [ext_resource type="Script" uid="uid://dsk5wi2bepq2s" path="res://scene.gd" id="1_j2eoc"]
@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://kksd0ke4vv2s" path="res://assets/Circle.png" id="5_tysh6"]
 [ext_resource type="FontFile" uid="uid://blx6yco87sn67" path="res://assets/Fonts/songs.ttf" id="6_dob7g"]
 [ext_resource type="Texture2D" uid="uid://c2hnyaw2ajaiv" path="res://assets/Open.png" id="8_q6i3i"]
+[ext_resource type="Texture2D" uid="uid://krv7r42tscvc" path="res://assets/Fill.png" id="9_q6i3i"]
+[ext_resource type="Script" uid="uid://b2rnabesvouhi" path="res://keys.gd" id="10_3hyav"]
+[ext_resource type="AudioStream" uid="uid://cr7n844qktst4" path="res://assets/Songs/06 Bodys.mp3" id="10_rjlwc"]
+[ext_resource type="FontFile" uid="uid://bmg3iphpoi20d" path="res://assets/Fonts/lyrics.ttf" id="12_g2wh3"]
+[ext_resource type="Script" uid="uid://jxnddx4suf8v" path="res://rating.gd" id="13_g2wh3"]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_j2eoc")
@@ -17,99 +22,12 @@ position = Vector2(1152, 648)
 scale = Vector2(1152, 648)
 texture = ExtResource("2_eort7")
 
-[node name="held" type="Node2D" parent="."]
-
-[node name="0" type="Sprite2D" parent="held"]
-position = Vector2(768, -152)
-scale = Vector2(0.12, 0.3)
-texture = ExtResource("1_4cvuw")
-script = ExtResource("3_7mckg")
-
-[node name="1" type="Sprite2D" parent="held"]
-position = Vector2(1028, -152)
-scale = Vector2(0.12, 0.3)
-texture = ExtResource("1_4cvuw")
-script = ExtResource("3_7mckg")
-
-[node name="2" type="Sprite2D" parent="held"]
-position = Vector2(1280, -152)
-scale = Vector2(0.12, 0.3)
-texture = ExtResource("1_4cvuw")
-script = ExtResource("3_7mckg")
-
-[node name="3" type="Sprite2D" parent="held"]
-position = Vector2(1536, -152)
-scale = Vector2(0.12, 0.3)
-texture = ExtResource("1_4cvuw")
-script = ExtResource("3_7mckg")
-
-[node name="notes" type="Node2D" parent="."]
-
-[node name="0" type="Sprite2D" parent="notes"]
-position = Vector2(768, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="1" type="Sprite2D" parent="notes"]
-position = Vector2(1024, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="2" type="Sprite2D" parent="notes"]
-position = Vector2(1280, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="3" type="Sprite2D" parent="notes"]
-position = Vector2(1536, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="4" type="Sprite2D" parent="notes"]
-position = Vector2(768, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="5" type="Sprite2D" parent="notes"]
-position = Vector2(1024, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="6" type="Sprite2D" parent="notes"]
-position = Vector2(1280, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="7" type="Sprite2D" parent="notes"]
-position = Vector2(1536, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="8" type="Sprite2D" parent="notes"]
-position = Vector2(768, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="9" type="Sprite2D" parent="notes"]
-position = Vector2(1024, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="10" type="Sprite2D" parent="notes"]
-position = Vector2(1280, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
-[node name="11" type="Sprite2D" parent="notes"]
-position = Vector2(1536, -111)
-texture = ExtResource("5_tysh6")
-script = ExtResource("2_j2eoc")
-
 [node name="debug" type="RichTextLabel" parent="."]
-offset_left = 16.0
-offset_top = 84.0
-offset_right = 573.0
-offset_bottom = 783.0
+visible = false
+offset_left = 22.0
+offset_top = 760.0
+offset_right = 579.0
+offset_bottom = 1459.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("6_dob7g")
 theme_override_font_sizes/normal_font_size = 48
@@ -124,18 +42,449 @@ beat
 beattime
 measuretime"
 
-[node name="0" type="Sprite2D" parent="."]
-position = Vector2(768, 1145)
-texture = ExtResource("8_q6i3i")
+[node name="points" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 21.0
+offset_top = 26.0
+offset_right = 578.0
+offset_bottom = 157.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_dob7g")
+theme_override_font_sizes/normal_font_size = 48
+text = "Points
+###"
 
-[node name="1" type="Sprite2D" parent="."]
-position = Vector2(1024, 1145)
-texture = ExtResource("8_q6i3i")
+[node name="combo" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 19.0
+offset_top = 142.0
+offset_right = 576.0
+offset_bottom = 273.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_dob7g")
+theme_override_font_sizes/normal_font_size = 48
+text = "Combo
+###"
 
-[node name="2" type="Sprite2D" parent="."]
-position = Vector2(1280, 1145)
-texture = ExtResource("8_q6i3i")
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_rjlwc")
+volume_db = -2.33
 
-[node name="3" type="Sprite2D" parent="."]
-position = Vector2(1536, 1145)
+[node name="held" type="Node2D" parent="."]
+
+[node name="0" type="Sprite2D" parent="held"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(810, -776)
+scale = Vector2(0.1, 0.3)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("3_7mckg")
+
+[node name="1" type="Sprite2D" parent="held"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(1038, -776)
+scale = Vector2(0.1, 0.3)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("3_7mckg")
+
+[node name="2" type="Sprite2D" parent="held"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(1266, -776)
+scale = Vector2(0.1, 0.3)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("3_7mckg")
+
+[node name="3" type="Sprite2D" parent="held"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(1494, -776)
+scale = Vector2(0.1, 0.3)
+texture = ExtResource("1_4cvuw")
+script = ExtResource("3_7mckg")
+
+[node name="notes" type="Node2D" parent="."]
+
+[node name="0" type="Sprite2D" parent="notes"]
+position = Vector2(810, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="1" type="Sprite2D" parent="notes"]
+position = Vector2(1038, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="2" type="Sprite2D" parent="notes"]
+position = Vector2(1266, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="3" type="Sprite2D" parent="notes"]
+position = Vector2(1494, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="4" type="Sprite2D" parent="notes"]
+position = Vector2(810, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="5" type="Sprite2D" parent="notes"]
+position = Vector2(1038, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="6" type="Sprite2D" parent="notes"]
+position = Vector2(1266, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="7" type="Sprite2D" parent="notes"]
+position = Vector2(1494, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="8" type="Sprite2D" parent="notes"]
+position = Vector2(810, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="9" type="Sprite2D" parent="notes"]
+position = Vector2(1038, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="10" type="Sprite2D" parent="notes"]
+position = Vector2(1266, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="11" type="Sprite2D" parent="notes"]
+position = Vector2(1494, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="12" type="Sprite2D" parent="notes"]
+position = Vector2(810, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="13" type="Sprite2D" parent="notes"]
+position = Vector2(1038, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="14" type="Sprite2D" parent="notes"]
+position = Vector2(1266, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="15" type="Sprite2D" parent="notes"]
+position = Vector2(1494, -735)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_tysh6")
+script = ExtResource("2_j2eoc")
+
+[node name="open" type="Node2D" parent="."]
+
+[node name="0" type="Sprite2D" parent="open"]
+position = Vector2(810, 1176)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_q6i3i")
+script = ExtResource("10_3hyav")
+
+[node name="1" type="Sprite2D" parent="open"]
+position = Vector2(1038, 1176)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_q6i3i")
+script = ExtResource("10_3hyav")
+
+[node name="2" type="Sprite2D" parent="open"]
+position = Vector2(1266, 1176)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_q6i3i")
+script = ExtResource("10_3hyav")
+
+[node name="3" type="Sprite2D" parent="open"]
+position = Vector2(1494, 1176)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_q6i3i")
+script = ExtResource("10_3hyav")
+
+[node name="fill" type="Node2D" parent="."]
+position = Vector2(810, 1176)
+scale = Vector2(0.8, 0.8)
+
+[node name="0" type="Sprite2D" parent="fill"]
+visible = false
+texture = ExtResource("9_q6i3i")
+
+[node name="1" type="Sprite2D" parent="fill"]
+visible = false
+position = Vector2(284.75, 0)
+texture = ExtResource("9_q6i3i")
+
+[node name="2" type="Sprite2D" parent="fill"]
+visible = false
+position = Vector2(570, 0)
+texture = ExtResource("9_q6i3i")
+
+[node name="3" type="Sprite2D" parent="fill"]
+visible = false
+position = Vector2(855, 0)
+texture = ExtResource("9_q6i3i")
+
+[node name="ratingtext" type="Node2D" parent="."]
+
+[node name="0" type="RichTextLabel" parent="ratingtext"]
+offset_left = 726.0
+offset_top = 1003.0
+offset_right = 894.0
+offset_bottom = 1084.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/normal_font = ExtResource("12_g2wh3")
+theme_override_font_sizes/normal_font_size = 40
+text = "rating"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_g2wh3")
+
+[node name="1" type="RichTextLabel" parent="ratingtext"]
+offset_left = 954.0
+offset_top = 1003.0
+offset_right = 1122.0
+offset_bottom = 1084.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/normal_font = ExtResource("12_g2wh3")
+theme_override_font_sizes/normal_font_size = 40
+text = "rating"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_g2wh3")
+
+[node name="2" type="RichTextLabel" parent="ratingtext"]
+offset_left = 1182.0
+offset_top = 1003.0
+offset_right = 1350.0
+offset_bottom = 1084.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/normal_font = ExtResource("12_g2wh3")
+theme_override_font_sizes/normal_font_size = 40
+text = "rating"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_g2wh3")
+
+[node name="3" type="RichTextLabel" parent="ratingtext"]
+offset_left = 1410.0
+offset_top = 1003.0
+offset_right = 1578.0
+offset_bottom = 1084.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/normal_font = ExtResource("12_g2wh3")
+theme_override_font_sizes/normal_font_size = 40
+text = "rating"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_g2wh3")
+
+[node name="lyrics 2" type="RichTextLabel" parent="."]
+offset_left = 1616.0
+offset_top = -1254.0
+offset_right = 2278.0
+offset_bottom = 1533.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("12_g2wh3")
+theme_override_font_sizes/normal_font_size = 27
+text = "that's not what I meant to say at all 
+I mean
+I'm sick of meaning, I just want to hold you 
+
+but that's not what I wanted to say at all 
+I mean
+I'm sick of meaning, I just want to hold you 
+
+(is it the chorus yet?
+No. it's just a building of the verse 
+so when the chorus does come 
+it'll be more rewarding.)
+
+I would speak to you in song 
+but you can't sing 
+as far as I'm aware
+though everyone can sing 
+as you are well aware
+
+I keep so quiet it's hard to tell I'm alive
+Everybody is swinging their hips
+Everybody is giving the waitress tips 
+Everybody's dancing all of the dances
+Everybody's dancing every dance right now!
+
+those are you got some nice shoulders
+I'd like to put my hands around them 
+I'd like to put my hands around them
+
+I have enough trouble 
+controlling my own limbs 
+stealing alcohol from 
+our parents/grandparents 
+there's no devil on one 
+shoulder/angel on the other 
+they're just two normal people
+
+(these are the people that I get drunk with 
+these are the people that I fell in love with)
+
+But if you keep drawing my eyes on your 
+hand and talking to the other let's pull out 
+the nail with the back of the hammer bc this
+one has grown old and bitter -
+
+well so what?
+We're young
+We're thin (most of us)
+We're alive (most of us)
+
+Don't you realize our bodies 
+could fall apart at any second?
+I am terrified your body 
+could fall apart at any second
+
+those are you got some nice shoulders 
+I'd like to put my hands around them 
+I'd like to put my hands around them
+
+we can get real horny 
+and keep messing around 
+we can keep real quiet 
+won't be making no sound
+I'll try my best not to touch your face 
+next time can we please meet at my place?
+
+and I know that I don't talk a lot 
+but I know that you don't care a lot 
+as long as we move our bodies around a lot 
+we'll forget that we forgot how to talk
+
+When we dance"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="lyrics 1" type="RichTextLabel" parent="."]
+offset_left = 42.0
+offset_top = 23.0
+offset_right = 704.0
+offset_bottom = 2810.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("12_g2wh3")
+theme_override_font_sizes/normal_font_size = 27
+text = "that's not what I meant to say at all 
+I mean
+I'm sick of meaning, I just want to hold you 
+
+but that's not what I wanted to say at all 
+I mean
+I'm sick of meaning, I just want to hold you 
+
+(is it the chorus yet?
+No. it's just a building of the verse 
+so when the chorus does come 
+it'll be more rewarding.)
+
+I would speak to you in song 
+but you can't sing 
+as far as I'm aware
+though everyone can sing 
+as you are well aware
+
+I keep so quiet it's hard to tell I'm alive
+Everybody is swinging their hips
+Everybody is giving the waitress tips 
+Everybody's dancing all of the dances
+Everybody's dancing every dance right now!
+
+those are you got some nice shoulders
+I'd like to put my hands around them 
+I'd like to put my hands around them
+
+I have enough trouble 
+controlling my own limbs 
+stealing alcohol from 
+our parents/grandparents 
+there's no devil on one 
+shoulder/angel on the other 
+they're just two normal people
+
+(these are the people that I get drunk with 
+these are the people that I fell in love with)
+
+But if you keep drawing my eyes on your 
+hand and talking to the other let's pull out 
+the nail with the back of the hammer bc this
+one has grown old and bitter -
+
+well so what?
+We're young
+We're thin (most of us)
+We're alive (most of us)
+
+Don't you realize our bodies 
+could fall apart at any second?
+I am terrified your body 
+could fall apart at any second
+
+those are you got some nice shoulders 
+I'd like to put my hands around them 
+I'd like to put my hands around them
+
+we can get real horny 
+and keep messing around 
+we can keep real quiet 
+won't be making no sound
+I'll try my best not to touch your face 
+next time can we please meet at my place?
+
+and I know that I don't talk a lot 
+but I know that you don't care a lot 
+as long as we move our bodies around a lot 
+we'll forget that we forgot how to talk
+
+When we dance"
+scroll_active = false
+autowrap_mode = 0

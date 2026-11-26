@@ -6,7 +6,7 @@ var clonebool:bool = false
 
 
 func _ready() -> void:
-	position.y = -152.0
+	position.y = -680.0
 
 # Clones every beat when active
 func _physics_process(_delta: float) -> void:

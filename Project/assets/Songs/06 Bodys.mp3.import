@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cr7n844qktst4"
+path="res://.godot/imported/06 Bodys.mp3-7451479a27359d7d06d37a9fc50225c2.mp3str"
+
+[deps]
+
+source_file="res://assets/Songs/06 Bodys.mp3"
+dest_files=["res://.godot/imported/06 Bodys.mp3-7451479a27359d7d06d37a9fc50225c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
