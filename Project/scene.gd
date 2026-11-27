@@ -5,7 +5,7 @@ var measuretime:int = 1
 var measure:int = 0
 var beat:int = 1
 var select:int = 0
-var song:Array = G.song1
+var song:Array = G.bodys
 var bp = song[0]
 var playing:bool = true
 
