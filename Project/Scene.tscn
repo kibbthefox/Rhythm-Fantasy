@@ -24,12 +24,11 @@ scale = Vector2(1152, 648)
 texture = ExtResource("2_eort7")
 
 [node name="Img3691" type="Sprite2D" parent="."]
-position = Vector2(1905, 647)
+position = Vector2(414, 666)
 scale = Vector2(1.09857, 1.09857)
 texture = ExtResource("1_4cvuw")
 
 [node name="debug" type="RichTextLabel" parent="."]
-visible = false
 offset_left = 22.0
 offset_top = 760.0
 offset_right = 579.0
@@ -71,10 +70,10 @@ text = "Combo
 ###"
 
 [node name="lyrics" type="RichTextLabel" parent="."]
-offset_left = 26.0
-offset_top = 268.0
-offset_right = 688.0
-offset_bottom = 3055.0
+offset_left = 1625.0
+offset_top = 1827.0
+offset_right = 2287.0
+offset_bottom = 4399.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = 15
 theme_override_fonts/normal_font = ExtResource("12_g2wh3")
@@ -153,6 +152,7 @@ we'll forget that we forgot how to talk
 When we dance"
 scroll_active = false
 autowrap_mode = 0
+horizontal_alignment = 2
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_rjlwc")
@@ -260,49 +260,49 @@ script = ExtResource("2_j2eoc")
 [node name="4" type="Sprite2D" parent="notes"]
 position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="5" type="Sprite2D" parent="notes"]
 position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="6" type="Sprite2D" parent="notes"]
 position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="7" type="Sprite2D" parent="notes"]
 position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="8" type="Sprite2D" parent="notes"]
 position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="9" type="Sprite2D" parent="notes"]
 position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="10" type="Sprite2D" parent="notes"]
 position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="11" type="Sprite2D" parent="notes"]
 position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_q6i3i")
+texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="12" type="Sprite2D" parent="notes"]
@@ -476,3 +476,8 @@ shortcut_keys_enabled = false
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("13_g2wh3")
+
+[node name="White" type="Sprite2D" parent="."]
+position = Vector2(2624.83, 2577.71)
+scale = Vector2(-273.83, -1295.44)
+texture = ExtResource("2_eort7")
