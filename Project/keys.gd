@@ -90,7 +90,7 @@ func hit(note:int,type:int):
 		else:
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(0)
 
-
+# deletes line+note if hold is broken
 func _process(_delta: float) -> void:
 	if G.holdstatus[int(self.name)] == 1:
 		if Input.is_action_just_released(str(keybind)) and three == false:

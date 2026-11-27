@@ -2,7 +2,7 @@ extends Sprite2D
 
 var going:bool = false
 var type:int = 1
-@onready var resetpos = position.y
+var resetpos = position.y
 
 # Selects which note sprite to send down
 func note(incometype):

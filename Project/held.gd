@@ -6,7 +6,7 @@ var clonebool:bool = false
 
 
 func _ready() -> void:
-	position.y = -1096.0
+	position.y = -1416.0
 
 # Clones every beat when active and moves them forward
 func _physics_process(_delta: float) -> void:
@@ -17,7 +17,6 @@ func _physics_process(_delta: float) -> void:
 			time = 1
 	if clonebool == true:
 		position.y += 10
-	# Deletes all clones if the key is lifted
 
 # Deletes Clones
 func _process(_delta: float) -> void:
