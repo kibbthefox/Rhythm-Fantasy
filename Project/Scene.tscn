@@ -162,28 +162,28 @@ volume_db = -2.33
 
 [node name="0" type="Sprite2D" parent="held"]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(810, -1416)
+position = Vector2(810, -1376)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
 
 [node name="1" type="Sprite2D" parent="held"]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(1038, -1416)
+position = Vector2(1038, -1376)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
 
 [node name="2" type="Sprite2D" parent="held"]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(1266, -1416)
+position = Vector2(1266, -1376)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
 
 [node name="3" type="Sprite2D" parent="held"]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(1494, -1416)
+position = Vector2(1494, -1376)
 scale = Vector2(0.1, 0.3)
 texture = ExtResource("1_4cvuw")
 script = ExtResource("3_7mckg")
@@ -234,145 +234,145 @@ texture = ExtResource("9_q6i3i")
 [node name="notes" type="Node2D" parent="."]
 
 [node name="0" type="Sprite2D" parent="notes"]
-position = Vector2(810, -1375)
+position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="1" type="Sprite2D" parent="notes"]
-position = Vector2(1038, -1375)
+position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="2" type="Sprite2D" parent="notes"]
-position = Vector2(1266, -1375)
+position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="3" type="Sprite2D" parent="notes"]
-position = Vector2(1494, -1375)
+position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="4" type="Sprite2D" parent="notes"]
-position = Vector2(810, -1375)
+position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("9_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="5" type="Sprite2D" parent="notes"]
-position = Vector2(1038, -1375)
+position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("9_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="6" type="Sprite2D" parent="notes"]
-position = Vector2(1266, -1375)
+position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("9_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="7" type="Sprite2D" parent="notes"]
-position = Vector2(1494, -1375)
+position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("9_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="8" type="Sprite2D" parent="notes"]
-position = Vector2(810, -1375)
+position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("8_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="9" type="Sprite2D" parent="notes"]
-position = Vector2(1038, -1375)
+position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("8_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="10" type="Sprite2D" parent="notes"]
-position = Vector2(1266, -1375)
+position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("8_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="11" type="Sprite2D" parent="notes"]
-position = Vector2(1494, -1375)
+position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_tysh6")
+texture = ExtResource("8_q6i3i")
 script = ExtResource("2_j2eoc")
 
 [node name="12" type="Sprite2D" parent="notes"]
-position = Vector2(810, -1375)
+position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="13" type="Sprite2D" parent="notes"]
-position = Vector2(1038, -1375)
+position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="14" type="Sprite2D" parent="notes"]
-position = Vector2(1266, -1375)
+position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="15" type="Sprite2D" parent="notes"]
-position = Vector2(1494, -1375)
+position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="16" type="Sprite2D" parent="notes"]
-position = Vector2(810, -1375)
+position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="17" type="Sprite2D" parent="notes"]
-position = Vector2(1038, -1375)
+position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="18" type="Sprite2D" parent="notes"]
-position = Vector2(1266, -1375)
+position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="19" type="Sprite2D" parent="notes"]
-position = Vector2(1494, -1375)
+position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="20" type="Sprite2D" parent="notes"]
-position = Vector2(810, -1375)
+position = Vector2(810, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="21" type="Sprite2D" parent="notes"]
-position = Vector2(1038, -1375)
+position = Vector2(1038, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="22" type="Sprite2D" parent="notes"]
-position = Vector2(1266, -1375)
+position = Vector2(1266, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")
 
 [node name="23" type="Sprite2D" parent="notes"]
-position = Vector2(1494, -1375)
+position = Vector2(1494, -1335)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_tysh6")
 script = ExtResource("2_j2eoc")

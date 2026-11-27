@@ -35,9 +35,6 @@ func _physics_process(_delta: float) -> void:
 	if playing == true:
 		if beattime == 1 and bp !=3 and bp !=5:
 			go(song[select+beat])
-			print(select)
-			print(beat)
-			print(song[select+beat])
 		beattime +=  1
 		measuretime += 1
 		if beattime > (240/bp) and bp !=3 and bp !=5:

@@ -28,7 +28,7 @@ func _process(_delta: float) -> void:
 	if G.holdstatus[int(int(self.name) - 4*floor(float(self.name) / 4.0))] == 2 and type == 3:
 		going = false
 		position.y = resetpos
-	if position.y >= 1296.0:
+	if position.y >= 1326.0:
 		get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(int(int(self.name) - 4*floor(float(self.name) / 4.0)))).display(0)
 		if type == 2:
 			G.broken[int(int(self.name) - 4*floor(float(self.name) / 4.0))] = true
