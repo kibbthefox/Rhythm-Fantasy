@@ -12,7 +12,9 @@ var playing:bool = true
 # Sets note count for next measure + debug menu (DELETE)
 func _process(_delta: float) -> void:
 	$points.text = "Points
-"+str(G.points)
+"+str(int(G.points))
+	$combo.text = "Combo
+"+str(G.combo)
 	if bp != 3:
 		$debug.text="debug
 notes: "+str(song[select+beat])+"
@@ -25,19 +27,19 @@ beat: "+str(beat)+"
 beattime: "+str(beattime)+"
 measuretime: "+str(measuretime) 
 
-# Counts measures/beats
+
 func _physics_process(_delta: float) -> void:
 	if playing == true:
 		bp = song[select]
+		# Starts song
 		if bp == 5:
 			$Music.play()
 			select += 1
 			bp = song[select]
+		# Tells notes to go
 		if beattime == 1 and bp !=3 and bp !=5:
-			print(select)
-			print(beat)
-			print(song[select+beat])
 			go(song[select+beat])
+		# Counts measures/beats
 		beattime +=  1
 		measuretime += 1
 		if beattime > (240/bp) and bp !=3 and bp !=5:
@@ -48,7 +50,8 @@ func _physics_process(_delta: float) -> void:
 			beat = 1
 			select += bp + 1
 			measuretime = 1
-		$lyrics.position.y -= 0.0932500682
+		# Makes lyrics scroll
+		$lyrics.position.y -= 0.075
 
 # Tells notes to go
 func go(notes:Array):

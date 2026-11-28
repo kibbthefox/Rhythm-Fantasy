@@ -33,8 +33,6 @@ func _process(_delta: float) -> void:
 		if type == 2:
 			G.broken[int(int(self.name) - 4*floor(float(self.name) / 4.0))] = true
 	if position.y >= 1372.0:
-		if type == 3: 
-			get_tree().root.get_node("Scene").get_node("fill").get_node(str(int(int(self.name) - 4*floor(float(self.name) / 4.0)) + 4)).visible = false
 		going = false
 		position.y = resetpos
 

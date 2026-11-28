@@ -25,7 +25,7 @@ func _input(_event: InputEvent) -> void:
 			if path.get_node(str(int(self.name)+4*i)).position.y > -639.0:
 				active[i] = path.get_node(str(int(self.name)+4*i)).position.y
 			else:
-				active[i] = -1000.0
+				active[i] = -1000.0 - i
 		if abs(1176.0 - active[0]) < abs(1176.0 - active[1]):
 			w1 = 0
 		else:
@@ -34,17 +34,6 @@ func _input(_event: InputEvent) -> void:
 			w2 = 2
 		else:
 			w2 = 3
-		if abs(1176.0 - active[w1]) < abs(1176.0 - active[w2]):
-			if path.get_node(str(int(self.name)+w1*4)).type == 3:
-				if path.get_node(str(int(self.name)+w1*4)).position.y >= 1026 and 1326 >= path.get_node(str(int(self.name)+w1*4)).position.y:
-					three = true
-				hit(int(self.name)+w1*4,3)
-		else:
-			if path.get_node(str(int(self.name)+w2*4)).type == 3:
-				if path.get_node(str(int(self.name)+w2*4)).position.y >= 1026 and 1326 >= path.get_node(str(int(self.name)+w2*4)).position.y:
-					three = true
-				hit(int(self.name)+w2*4,3)
-				
 		if abs(1176.0 - active[w1]) < abs(1176.0 - active[w2]) and \
 		abs(1176.0 - active[w1]) < abs(1176.0 - active[w3]):
 			if path.get_node(str(int(self.name)+w1*4)).type == 3:
@@ -76,7 +65,7 @@ func _input(_event: InputEvent) -> void:
 			if path.get_node(str(int(self.name)+4*i)).position.y > -1335.0:
 				active[i] = path.get_node(str(int(self.name)+4*i)).position.y
 			else:
-				active[i] = -1335.0
+				active[i] = -1335.0 - i
 		if abs(1176.0 - active[0]) < abs(1176.0 - active[1]):
 			w1 = 0
 		else:
@@ -110,17 +99,21 @@ func hit(note:int,type:int):
 		if path.get_node(str(note)).position.y >= 1156 and 1196 >= path.get_node(str(note)).position.y:
 			path.get_node(str(note)).hit()
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(3)
-			G.points += 400
+			G.points += 40 * (1.0 + G.combo/100.0)
+			G.combo += 1
 		elif path.get_node(str(note)).position.y >= 1106 and 1246 >= path.get_node(str(note)).position.y:
 			path.get_node(str(note)).hit()
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(2)
-			G.points += 200
+			G.points += 20 * (1.0 + G.combo/100.0)
+			G.combo += 1
 		elif path.get_node(str(note)).position.y >= 1026 and 1326 >= path.get_node(str(note)).position.y :
 			path.get_node(str(note)).hit()
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(1)
-			G.points += 100
+			G.points += 10 * (1.0 + G.combo/100.0)
+			G.combo += 1
 		else:
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(0)
+			G.combo = 0
 
 # deletes line+note if hold is broken
 func _process(_delta: float) -> void:
@@ -128,6 +121,7 @@ func _process(_delta: float) -> void:
 		if Input.is_action_just_released(str(keybind)) and three == false:
 			print(three)
 			G.holdstatus[int(self.name)] = 2
+			G.combo = 0
 			G.broken[int(self.name)] = true
 		elif three == true:
 			print(three)

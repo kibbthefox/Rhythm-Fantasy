@@ -26,11 +26,11 @@ func _process(_delta: float) -> void:
 		if G.broken[int(self.name)] == true:
 			G.holdstatus[int(self.name)] = 2
 			going = false
-			get_tree().call_group("clones", "queue_free")
+			get_tree().call_group("clones" + self.name, "queue_free")
 
 # Clones
 func clone():
 	var copy = self.duplicate()
 	copy.clonebool = true
-	copy.add_to_group("clones")
+	copy.add_to_group("clones" + self.name)
 	get_parent().add_child(copy)
