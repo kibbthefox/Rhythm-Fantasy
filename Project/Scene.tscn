@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://67uknsciq8u0" path="res://notes.gd" id="2_j2eoc"]
 [ext_resource type="Script" uid="uid://da2lav322ovk0" path="res://held.gd" id="3_7mckg"]
 [ext_resource type="Texture2D" uid="uid://kksd0ke4vv2s" path="res://assets/Circle.png" id="5_tysh6"]
-[ext_resource type="AudioStream" uid="uid://bbpd2y7e85f5s" path="res://assets/Songs/bodyschart.mp3" id="6_567bu"]
+[ext_resource type="AudioStream" uid="uid://inv8pti5s5t5" path="res://assets/Songs/bodyschart.mp3" id="6_567bu"]
 [ext_resource type="FontFile" uid="uid://blx6yco87sn67" path="res://assets/Fonts/songs.ttf" id="6_dob7g"]
 [ext_resource type="Texture2D" uid="uid://c2hnyaw2ajaiv" path="res://assets/Open.png" id="8_q6i3i"]
 [ext_resource type="Texture2D" uid="uid://biyf5dg04nhgs" path="res://assets/block.png" id="9_567bu"]
@@ -86,9 +86,9 @@ horizontal_alignment = 1
 
 [node name="lyrics" type="RichTextLabel" parent="."]
 offset_left = 1614.0
-offset_top = 1684.0
+offset_top = 1604.0
 offset_right = 2276.0
-offset_bottom = 4256.0
+offset_bottom = 4176.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = 15
 theme_override_fonts/normal_font = ExtResource("12_g2wh3")

@@ -13,6 +13,7 @@ func note(incometype):
 		type = incometype
 		if type == 2: # Starts cloning
 			G.broken[int(int(self.name) - 4*floor(float(self.name) / 4.0))] = false
+			G.holdstatus[int(int(self.name) - 4*floor(float(self.name) / 4.0))] = 0
 			get_tree().root.get_node("Scene").get_node("held").get_node(str(int(int(self.name) - 4*floor(float(self.name) / 4.0)))).going = true
 		if type == 3: # Ends cloning
 			get_tree().root.get_node("Scene").get_node("held").get_node(str(int(int(self.name) - 4*floor(float(self.name) / 4.0)))).going = false
@@ -29,6 +30,7 @@ func _process(_delta: float) -> void:
 		going = false
 		position.y = resetpos
 	if position.y >= 1326.0:
+		G.combo = 0
 		get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(int(int(self.name) - 4*floor(float(self.name) / 4.0)))).display(0)
 		if type == 2:
 			G.broken[int(int(self.name) - 4*floor(float(self.name) / 4.0))] = true

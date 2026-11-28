@@ -25,7 +25,7 @@ func _input(_event: InputEvent) -> void:
 			if path.get_node(str(int(self.name)+4*i)).position.y > -639.0:
 				active[i] = path.get_node(str(int(self.name)+4*i)).position.y
 			else:
-				active[i] = -1000.0 - i
+				active[i] = -1000.0
 		if abs(1176.0 - active[0]) < abs(1176.0 - active[1]):
 			w1 = 0
 		else:
@@ -65,7 +65,7 @@ func _input(_event: InputEvent) -> void:
 			if path.get_node(str(int(self.name)+4*i)).position.y > -1335.0:
 				active[i] = path.get_node(str(int(self.name)+4*i)).position.y
 			else:
-				active[i] = -1335.0 - i
+				active[i] = -1335.0
 		if abs(1176.0 - active[0]) < abs(1176.0 - active[1]):
 			w1 = 0
 		else:
@@ -94,7 +94,7 @@ func _input(_event: InputEvent) -> void:
 # Adds points based on distance and tells notes they are hit
 func hit(note:int,type:int):
 	if type != 3 or G.holdstatus[int(self.name)] == 1 and type == 3:
-		if type == 2:
+		if type == 2 and path.get_node(str(note)).position.y >= 1026 and 1326 >= path.get_node(str(note)).position.y:
 			G.holdstatus[int(self.name)] = 1
 		if path.get_node(str(note)).position.y >= 1156 and 1196 >= path.get_node(str(note)).position.y:
 			path.get_node(str(note)).hit()
@@ -106,12 +106,12 @@ func hit(note:int,type:int):
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(2)
 			G.points += 20 * (1.0 + G.combo/100.0)
 			G.combo += 1
-		elif path.get_node(str(note)).position.y >= 1026 and 1326 >= path.get_node(str(note)).position.y :
+		elif path.get_node(str(note)).position.y >= 1026 and 1326 >= path.get_node(str(note)).position.y:
 			path.get_node(str(note)).hit()
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(1)
 			G.points += 10 * (1.0 + G.combo/100.0)
 			G.combo += 1
-		else:
+		elif path.get_node(str(note)).position.y < 1026 and 1326 < path.get_node(str(note)).position.y:
 			get_tree().root.get_node("Scene").get_node("ratingtext").get_node(str(self.name)).display(0)
 			G.combo = 0
 

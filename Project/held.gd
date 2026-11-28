@@ -15,6 +15,8 @@ func _physics_process(_delta: float) -> void:
 		if time > 15:
 			clone()
 			time = 1
+	else:
+		time = 16
 	if clonebool == true:
 		position.y += 10
 

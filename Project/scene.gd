@@ -9,23 +9,12 @@ var song:Array = G.bodys
 var bp = song[0]
 var playing:bool = true
 
-# Sets note count for next measure + debug menu (DELETE)
+# Sets point + combo text
 func _process(_delta: float) -> void:
 	$points.text = "Points
 "+str(int(G.points))
 	$combo.text = "Combo
 "+str(G.combo)
-	if bp != 3:
-		$debug.text="debug
-notes: "+str(song[select+beat])+"
-bp: "+str(bp)+"
-select: "+str(select)+"
-
-measure: "+str(measure)+"
-beat: "+str(beat)+"
-
-beattime: "+str(beattime)+"
-measuretime: "+str(measuretime) 
 
 
 func _physics_process(_delta: float) -> void:
